@@ -11,7 +11,7 @@
       let sec = 60;
       
       setInterval(() => {
-        sec *= 59/60;
+        sec *= 0.9996639141231879; // 50 FPS => 59/60 per second
         
         let disp = Math.round(sec);
         let res = 1;
@@ -21,7 +21,7 @@
         }
         
         document.querySelector('h1').textContent = disp;
-      }, 1000);
+      }, 20);
     </script>
   </body>
 </html>
