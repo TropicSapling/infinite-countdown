@@ -1,0 +1,27 @@
+<html>
+  <head></head>
+  <body style="
+    justify-content: center;
+    align-content: center;
+    font-size: 255;
+    display: grid;
+  ">
+    <h1>60</h1>
+    <script>
+      let sec = 60;
+      
+      setInterval(() => {
+        sec *= 59/60;
+        
+        let disp = Math.round(sec);
+        let res = 1;
+        while(disp == 0) {
+          res *= 10;
+          disp = Math.round(sec*res)/res;
+        }
+        
+        document.querySelector('h1').textContent = disp;
+      }, 1000);
+    </script>
+  </body>
+</html>
